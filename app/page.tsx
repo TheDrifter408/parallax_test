@@ -1,101 +1,60 @@
+'use client';
 import Image from "next/image";
+import HistoryImg from "/public/history-image.jpg";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import  HomeSlider from "./components/HomeSlider";
+import Parallax from "./components/Parallax";
+import ResponsiveSlider from "./components/ResponsiveSlider";
 
 export default function Home() {
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+    <Container>
+      <>
+        <Header />
+        <article className="w-[95%] col-span-12 grid grid-cols-12 grid-rows-2 mx-auto overflow-y-visible">
+          <h1 className="col-span-6 row-span-1 text-5xl font-extrabold text-white text-pretty">Manufacturing Excellence Across Industries</h1>
+          <HomeSlider />
+        </article>
+      </>
+    </Container>
+    <section className="bg-background-texture bg-gray-200/50 bg-no-repeat object-cover h-[140vh] grid grid-cols-12 items-start px-4">
+      <h2 className="my-6 col-span-6 font-bold text-4xl text-blue-900">
+        Surpassing expectations at every step
+      </h2>
+      <div className="col-span-12 grid grid-cols-subgrid gap-4">
+        <h3 className="col-span-12 my-2 text-xl text-gray-600">
+          Renowed for delivering high-quality products across diverse industries. Our unwavering commitment to innovation and sustainability drives to set new standards in every venture we undertake.
+        </h3>
+        <p className="col-span-12 my-2 text-gray-600">For over 30 years, Nasir Group of Industries stands as a beacon of excellence in the manufacturing has been developing solutions that have its identity in the projects it built.
+        </p>
+        <button className="col-span-5 bg-radial-gradient text-white p-3">Know More About Us</button>
+      </div>
+      <article className="col-span-12 grid grid-cols-subgrid bg-white text-blue-800 mt-6">
+        <div className="p-6 col-span-7 border-r-[1px] border-gray-200">
+          <h3 className="text-4xl font-bold">20+</h3>
+          <h3 className="text-2xl">years of experience</h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="p-6 col-span-5">
+          <h3 className="text-4xl font-bold">11</h3>
+          <h3 className="text-2xl">sister concerns we have</h3>
+        </div>
+        <div className="p-6 col-span-12 border-t-[1px] border-gray-200">
+          <h3 className="text-4xl font-bold">45,000+</h3>
+          <h3 className="text-2xl">employees nationwide</h3>
+        </div>
+      </article>
+      <article className="col-span-12 grid grid-cols-subgrid">
+        <Image className="col-span-12" src={HistoryImg} alt="history image" />
+        <Parallax yValues={[750,-10,-20,-30]} className="col-span-12">
+          <h1 className="text-blue-800/80 text-5xl font-extrabold tracking-widest">History</h1>
+        </Parallax>
+        <ResponsiveSlider />
+      </article>
+    </section>
+    </>
+    
   );
 }
